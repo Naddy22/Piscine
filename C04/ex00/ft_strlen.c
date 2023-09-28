@@ -6,28 +6,31 @@
 /*   By: namoisan <namoisan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 13:51:23 by namoisan          #+#    #+#             */
-/*   Updated: 2023/09/25 14:00:37 by namoisan         ###   ########.fr       */
+/*   Updated: 2023/09/28 17:50:34 by namoisan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-int	ft_strlen(char *str)
+// Fonction qui calcule la longueur d'une chaîne de caractères.
+int ft_strlen(char *str)
 {
-	int	c;
+    int c = 0; // Compteur pour parcourir la chaîne.
 
-	c = 0;
-	while (str[c] != '\0')
-	{
-		c++;
-	}
-	return (c);
+    while (str[c] != '\0')
+    {
+        c++; // Incrémente le compteur à chaque caractère rencontré.
+    }
+
+    return (c); // Retourne la longueur de la chaîne.
 }
-/*
-int	main(void)
-{
-	char str[] = "Je vais être prise à 42 Quebec";
 
-	printf("%d", ft_strlen(str));
-	return (0);
-}*/
+/*
+int main(void)
+{
+    char str[] = "Je vais être prise à 42 Quebec";
+
+    printf("%d", ft_strlen(str));
+    return (0);
+}
+*/

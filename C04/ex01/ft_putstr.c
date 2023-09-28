@@ -1,17 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namoisan <namoisan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 13:52:45 by namoisan          #+#    #+#             */
-/*   Updated: 2023/09/25 11:56:16 by namoisan         ###   ########.fr       */
+/*   Created: 2023/09/25 14:46:15 by namoisan          #+#    #+#             */
+/*   Updated: 2023/09/27 17:38:30 by namoisan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_putstr(char *str)
 {
-	write (1, "abcdefghijklmnopqrstuvwxyz", 26); //possible d'entrer directement les caracteres entres guillemets, ne pas oublier de changer le nombre de caractere à imprimer dans le 3eme parametre.
+	int	c;
+
+	c = 0;
+	while (str[c] != '\0')
+	{
+		write (1, &str[c], 1);
+		c++;
+	}
+	str[c] = '\0';
 }
+/*
+int	main(void)
+{
+	char str[] = "Poupoupidou POU!";
+
+	ft_putstr(str);
+	return (0);
+}*/

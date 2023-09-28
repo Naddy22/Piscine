@@ -6,7 +6,7 @@
 /*   By: namoisan <namoisan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 15:01:59 by namoisan          #+#    #+#             */
-/*   Updated: 2023/09/19 11:37:48 by namoisan         ###   ########.fr       */
+/*   Updated: 2023/09/25 12:04:29 by namoisan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_ft(int *nbr)
 {
-	*nbr = 42;
+	*nbr = 42; //la on change la valeur du int pointé par *nbr en lui donnant la valeur 42
 }
 /*
 int	main(void)

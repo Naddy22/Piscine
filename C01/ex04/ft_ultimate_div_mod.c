@@ -6,7 +6,7 @@
 /*   By: namoisan <namoisan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 10:31:22 by namoisan          #+#    #+#             */
-/*   Updated: 2023/09/19 11:39:38 by namoisan         ###   ########.fr       */
+/*   Updated: 2023/09/25 12:09:11 by namoisan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	int	temp;
 
 	temp = *a;
-	*a = *a / *b;
+	*a = *a / *b; //faire un int temporaire pour ne pas changer la valeur de *a suite au premier calcul, sinon le calcul qui aurait été dans le *b n'aurait pas été bon car *a serait devenu *a/*b
 	*b = temp % *b;
 }
 

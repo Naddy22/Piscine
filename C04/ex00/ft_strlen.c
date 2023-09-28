@@ -1,17 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namoisan <namoisan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 13:52:45 by namoisan          #+#    #+#             */
-/*   Updated: 2023/09/25 11:56:16 by namoisan         ###   ########.fr       */
+/*   Created: 2023/09/25 13:51:23 by namoisan          #+#    #+#             */
+/*   Updated: 2023/09/25 14:00:37 by namoisan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include <stdio.h>
 
-void	ft_print_alphabet(void)
+int	ft_strlen(char *str)
 {
-	write (1, "abcdefghijklmnopqrstuvwxyz", 26); //possible d'entrer directement les caracteres entres guillemets, ne pas oublier de changer le nombre de caractere à imprimer dans le 3eme parametre.
+	int	c;
+
+	c = 0;
+	while (str[c] != '\0')
+	{
+		c++;
+	}
+	return (c);
 }
+/*
+int	main(void)
+{
+	char str[] = "Je vais être prise à 42 Quebec";
+
+	printf("%d", ft_strlen(str));
+	return (0);
+}*/

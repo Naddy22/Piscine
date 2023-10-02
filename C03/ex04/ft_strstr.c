@@ -6,45 +6,51 @@
 /*   By: namoisan <namoisan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 17:20:03 by namoisan          #+#    #+#             */
-/*   Updated: 2023/09/28 17:49:50 by namoisan         ###   ########.fr       */
+/*   Updated: 2023/10/02 10:51:51 by namoisan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-// Fonction qui recherche la première occurrence de la chaîne to_find dans la chaîne str.
-char *ft_strstr(char *str, char *to_find)
+char	*ft_strstr(char *str, char *to_find)
 {
-    int s = 0; // Index pour parcourir str.
-    int f = 0; // Index pour parcourir to_find.
-    char *result = 0; // Pointeur vers le début de la sous-chaîne trouvée.
+	int		s; // Indice pour parcourir la chaîne 'str'.
+	int		f; // Indice pour parcourir la chaîne 'to_find'.
 
-    if (to_find[0] == '\0')
-        return (str); // Si to_find est vide, retourne str.
+	s = 0;
+	f = 0;
 
-    while (str[s] != '\0')
-    {
-        while (str[s] == to_find[f])
-        {
-            if (to_find[f + 1] == '\0')
-                result = &str[s - f]; // Si to_find est entièrement trouvé, met à jour le pointeur result.
-            s++;
-            f++;
-        }
-        s++; // Avance dans str.
-    }
+	if (to_find[f] == '\0')
+		return (str); // Si 'to_find' est une chaîne vide, retourne 'str'.
 
-    return (result); // Retourne le pointeur result (peut être NULL si to_find n'a pas été trouvé).
+	while (str[s] != '\0')
+	{
+		while (str[s] == to_find[f] && str[s] != '\0')
+		{
+			if (to_find[f + 1] == '\0')
+				return (&str[s - f]); // Correspondance trouvée, retourne un pointeur vers le début de la sous-chaîne correspondante dans 'str'.
+			s++;
+			f++;
+		}
+
+		s = s - f; // Réinitialise 's' pour continuer la recherche.
+		f = 0; // Réinitialise 'f'.
+
+		if (str[s] == '\0')
+			return (0); // Aucune correspondance trouvée, retourne 0.
+
+		s++;
+	}
+
+	return (0); // Aucune correspondance trouvée, retourne 0.
 }
-
 /*
-int main(void)
+int	main(void)
 {
-    char str[] = "Je fais des dessins bleu blanc rouge";
-    char find[] = "chat";
-    char *result = ft_strstr(str, find);
+	char str[] = "testning";
+	char find[] = "n";
+	char *result = ft_strstr(str, find);
 
-    printf("%s", result);
-    return (0);
-}
-*/
+	printf("%s", result);
+	return (0);
+}*/

@@ -6,7 +6,7 @@
 /*   By: namoisan <namoisan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 14:19:21 by namoisan          #+#    #+#             */
-/*   Updated: 2023/09/30 15:31:26 by namoisan         ###   ########.fr       */
+/*   Updated: 2023/10/03 15:09:55 by namoisan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,24 @@
 
 int	ft_iterative_factorial(int nb)
 {
-	int	result;
-	int	c;
+	int	result; // Variable pour stocker le résultat
+	int	c; // Compteur pour la boucle
 
-	result = 1;
-	c = 1;
+	result = 1; // Initialisation du résultat à 1
+	c = 1; // Initialisation du compteur à 1
+
 	if (nb < 0)
-		return (0);
+		return (0); // Si nb est négatif, le résultat est 0
 	if (nb == 0)
-		return (1);
-	while (c <= nb)
+		return (1); // Si nb est égal à 0, le résultat est 1
+
+	while (c <= nb) // Boucle pour calculer le facteur
 	{
-		result = result * c;
-		c++;
+		result = result * c; // Multiplication du résultat par le compteur
+		c++; // Incrémentation du compteur
 	}
-	return (result);
+
+	return (result); // Retourne le résultat du calcul du facteur
 }
 
 // int	main(void)
